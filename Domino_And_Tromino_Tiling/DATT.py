@@ -1,9 +1,4 @@
-# Domino + L-tromino tiling of 2 x n board
-# dp by column with a 2-bit mask for the current column.
-# Returns number of tilings of 2 x n (mod mod if provided).
-
 from functools import lru_cache
-
 H = 2  # height
 
 def gen_transitions():
@@ -94,3 +89,4 @@ def count_tilings(n, mod=None):
 if __name__ == "__main__":
     for n in range(1, 11):
         print(f"n={n:2d} -> ways = {count_tilings(n)}")
+
